@@ -14,7 +14,6 @@ var React = require('react');
 var WeatherMsg = ({location,temp}) => {
   // var loc = props.location;
   // var temp = props.temp;
-  debugger;
   return(
     <h3>Its {temp} in {location}</h3>
   );
