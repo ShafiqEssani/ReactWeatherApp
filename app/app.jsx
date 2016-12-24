@@ -14,7 +14,7 @@ var Example = require('Example');
 // var { name } = obj; // ek naya var obj with the name of name setted to default name.
 
 
-
+    
 ReactDOM.render(
   <Router history = {hashHistory}>
 

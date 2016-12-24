@@ -7,14 +7,17 @@ module.exports = {
     var encodeLoc = encodeURIComponent(location);
     var requestURL = `${URL}&q=${encodeLoc}`;
 
-    return axios.get(requestURL).then(function(res){
+    return axios.get(requestURL)
+    .then(res => {
       if ( res.data.cod && res.data.message){
         throw new Error(res.data.message);
       } else {
         return res.data.main.temp;
       }
-    }, function(res){
-      throw new Error(res.data.message);
-    });
+    })
+    .catch(err => {
+      // console.log(err.response.data.message);
+      throw new Error(err.response.data.message);
+    })
   }
 }
