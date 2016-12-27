@@ -11,15 +11,15 @@ var React = require('react');
 //   );
 // });
 
-var WeatherMsg = ({location,temp,e}) => {
+var WeatherMsg = ({location,temp}) => {
   // var loc = props.location;
   // var temp = props.temp;
 
-  if (e) {
-    return (<h3 className="text-center">{e}</h3>);
-  } else {
+  // if (e) {
+  //   return (<h3 className="text-center">{e}</h3>);
+  // } else {
     return <h3 className="text-center">Its {temp} in {location}</h3>;
-  }
+  
 }
 
 module.exports = WeatherMsg;
