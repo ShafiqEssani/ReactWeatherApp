@@ -16,9 +16,9 @@ var WeatherMsg = ({location,temp,e}) => {
   // var temp = props.temp;
 
   if (e) {
-    return (<h3>{e}</h3>);
+    return (<h3 className="text-center">{e}</h3>);
   } else {
-    return <h3>Its {temp} in {location}</h3>;
+    return <h3 className="text-center">Its {temp} in {location}</h3>;
   }
 }
 
