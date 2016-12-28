@@ -9,13 +9,14 @@ var Example = require('Example');
 // var obj = {
 //   name = 'Shafiq';
 // }
-
-//
 // var { name } = obj; // ek naya var obj with the name of name setted to default name.
 
 // Load foundation
 require('style!css!foundation-sites/dist/foundation.min.css');
 $(document).foundation();
+
+//Load AppStyles
+require('style!css!AppStyles');
 
 ReactDOM.render(
   <Router history = {hashHistory}>
