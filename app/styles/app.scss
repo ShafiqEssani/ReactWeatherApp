@@ -1,0 +1,12 @@
+$space: 2.5rem;
+$tcolor: #555;
+
+.pagetitle {
+  color: $tcolor;
+  margin-top: $space;
+  margin-bottom: $space;
+}
+
+input[type=search] {
+  box-shadow: none;
+}
