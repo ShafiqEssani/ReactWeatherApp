@@ -5,7 +5,14 @@ var Nav = React.createClass({
 
   onSearch: function(e){
     e.preventDefault();
-    alert('Not yet wired up');
+
+    var nloc = this.refs.autoloc.value;
+    var encodeLoc = encodeURIComponent(nloc);
+
+    if( nloc.length > 0 ) {
+      this.refs.autoloc.value = '';
+      window.location.hash = '#/?location=' + encodeLoc;
+    }
   },
 
 
@@ -30,7 +37,7 @@ var Nav = React.createClass({
         <div className="top-bar-right">
           <form onSubmit={this.onSearch}>
             <ul className="menu">
-                <li><input type="search" placeholder="Search Weather by city"/></li>
+                <li><input type="search" placeholder="Search Here" ref="autoloc" /></li>
                 <li><input type="submit" className="button" value="Search"/></li>
             </ul>
           </form>
