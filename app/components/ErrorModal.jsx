@@ -12,6 +12,7 @@ var ErrorModal = React.createClass({
     title: React.PropTypes.string,
     msg: React.PropTypes.string.isRequired
   },
+
   componentDidMount: function(){
 
     var {title, msg} = this.props;
