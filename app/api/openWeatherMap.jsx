@@ -12,7 +12,11 @@ module.exports = {
       if ( res.data.cod && res.data.message){
         throw new Error(res.data.message);
       } else {
-        return res.data.main.temp;
+        if (encodeLoc.toLowerCase() == res.data.name.toLowerCase()){
+          return res.data.main.temp;
+        } else {
+          throw new Error();
+        }
       }
     })
     .catch(err => {

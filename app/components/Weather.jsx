@@ -32,7 +32,7 @@ var Weather = React.createClass ({
     function( errorMsg ){
         that.setState({
         isLoading: false,
-        err: errorMsg.message
+        err: "Error: Not found city"
       });
       //alert(errorMsg);
     });
